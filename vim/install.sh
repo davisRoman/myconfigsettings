@@ -2,6 +2,11 @@
 
 set -e
 
+for package in vim-nox ruby-dev cmake python python-dev cscope exuberant-ctags
+do
+   ! dpkg -l | grep -q $package && sudo apt-get -y install $package || echo "$package already installed!"
+done
+
 if [ -d ~/.vim/ ] || [ -f ~/.viminfo ] || [ -f ~/.vimrc ]; then
     while true; do
         read -p "Existing vim related files found in your home directory. Should I clobber (Y/n)?" yn
@@ -26,11 +31,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 vim +PlugInstall +qall
-
-for package in vim-nox ruby-dev cmake python python-dev cscope exuberant-ctags
-do
-   ! dpkg -l | grep -q $package && sudo apt-get -y install $package || echo "$package already installed!"
-done
 
 pushd ~/.vim/plugged/command-t/
    rake make
