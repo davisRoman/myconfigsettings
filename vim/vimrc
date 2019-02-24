@@ -1,2 +1,4 @@
 call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'wincent/command-t'
 call plug#end()
