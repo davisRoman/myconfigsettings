@@ -27,11 +27,15 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 vim +PlugInstall +qall
 
-for package in vim-nox ruby-dev
+for package in vim-nox ruby-dev cmake python python-dev
 do
    ! dpkg -l | grep -q $package && apt-get install $package || echo "$package already installed!"
 done
 
 pushd ~/.vim/plugged/command-t/
    rake make
+popd
+
+pushd ~/.vim/plugged/YouCompleteMe/
+   ./install.py --clang-completer
 popd
