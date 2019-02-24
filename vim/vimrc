@@ -13,6 +13,7 @@ Plug 'wincent/command-t'
 Plug 'sjbach/lusty'
 Plug 'vim-scripts/cscope.vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " basic stuff
