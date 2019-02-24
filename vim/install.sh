@@ -2,7 +2,7 @@
 
 set -e
 
-if [ -d ~/.vim/    ] || [ -f ~/.viminfo ] || [ -f ~/.vimrc   ]; then
+if [ -d ~/.vim/ ] || [ -f ~/.viminfo ] || [ -f ~/.vimrc ]; then
     while true; do
         read -p "Existing vim related files found in your home directory. Should I clobber (Y/n)?" yn
         case $yn in
