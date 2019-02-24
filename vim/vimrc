@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'wincent/command-t'
 Plug 'sjbach/lusty'
 Plug 'vim-scripts/cscope.vim'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " basic stuff
