@@ -27,7 +27,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 vim +PlugInstall +qall
 
-for package in vim-nox ruby-dev cmake python python-dev
+for package in vim-nox ruby-dev cmake python python-dev cscope exuberant-ctags
 do
    ! dpkg -l | grep -q $package && sudo apt-get -y install $package || echo "$package already installed!"
 done
