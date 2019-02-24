@@ -10,9 +10,11 @@ let mapleader = ","
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/command-t'
+Plug 'sjbach/lusty'
 call plug#end()
 
 " basic stuff
+set hidden
 syntax on
 set number
 :set expandtab
