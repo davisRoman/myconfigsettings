@@ -29,7 +29,7 @@ vim +PlugInstall +qall
 
 for package in vim-nox ruby-dev cmake python python-dev
 do
-   ! dpkg -l | grep -q $package && apt-get install $package || echo "$package already installed!"
+   ! dpkg -l | grep -q $package && sudo apt-get -y install $package || echo "$package already installed!"
 done
 
 pushd ~/.vim/plugged/command-t/
