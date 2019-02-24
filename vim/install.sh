@@ -37,5 +37,13 @@ pushd ~/.vim/plugged/command-t/
 popd
 
 pushd ~/.vim/plugged/YouCompleteMe/
-   ./install.py --clang-completer
+    #In case you get the error "Virtual memory exhausted: Cannot allocate memory"
+    # due to not enough onboard memory
+    # sudo fallocate -l 1G ~/swapfile
+    # sudo chmod 600 ~/swapfile
+    # sudo mkswap ~/swapfile
+    # sudo swapon ~/swapfile
+    # sudo ~/swapon -s
+    [ -f /etc/rpi-issue ] && X=1 #https://nallerooth.com/post/building_ycm_on_raspberry_pi_3/
+    YCM_CORES=$X ./install.py --clang-completer
 popd
