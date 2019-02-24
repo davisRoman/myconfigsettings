@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/command-t'
 Plug 'sjbach/lusty'
+Plug 'vim-scripts/cscope.vim'
 call plug#end()
 
 " basic stuff

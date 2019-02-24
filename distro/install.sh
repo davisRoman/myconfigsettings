@@ -2,7 +2,7 @@
 
 set -e
 
-for package in minicom xterm tmux
+for package in minicom xterm tmux cscope exuberant-ctags
 do
     if ! dpkg -l | grep -q $package;then
         echo "$package needs to be installed"
