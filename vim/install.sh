@@ -26,3 +26,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 vim +PlugInstall +qall
+
+for package in vim-nox ruby-dev
+do
+   ! dpkg -l | grep -q $package && apt-get install $package || echo "$package already installed!"
+done
+
+pushd ~/.vim/plugged/command-t/
+   rake make
+popd
