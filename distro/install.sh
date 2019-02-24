@@ -2,7 +2,7 @@
 
 set -e
 
-for package in minicom xterm tmux tig
+for package in minicom xterm tmux tig lsof
 do
     if ! dpkg -l | grep -q $package;then
         echo "$package needs to be installed"
