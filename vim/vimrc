@@ -1,9 +1,22 @@
-syntax on
-set number
-:set expandtab
-set tabstop=4
-:let mapleader = ","
+"       _
+"__   _(_)_ __ ___  _ __ ___
+"\ \ / / | '_ ` _ \| '__/ __|
+" \ V /| | | | | | | | | (__
+"  \_/ |_|_| |_| |_|_|  \___|
+"
+
+let mapleader = ","
+
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/command-t'
 call plug#end()
+
+" basic stuff
+syntax on
+set number
+:set expandtab
+set tabstop=4
+
+" mappings
+map <silent> <C-n> :NERDTreeToggle<CR>
