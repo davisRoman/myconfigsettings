@@ -12,6 +12,9 @@ do
     fi
 done
 
+git config --global core.editor "vim"
+git config --global user.name   "davis roman"
+
 if ! [ -f ~/.fzf/install-complete ];then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     pushd ~/.fzf
