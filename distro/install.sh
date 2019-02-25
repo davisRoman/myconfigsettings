@@ -31,3 +31,5 @@ fi
 if ! grep -q bell-style ~/.bashrc;then
     echo "bind 'set bell-style none'" >> ~/.bashrc
 fi
+
+sudo usermod -a -G dialout $USER
