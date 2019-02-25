@@ -26,6 +26,7 @@ set number
 set tabstop=4
 set hlsearch
 set incsearch
+set noeb vb t_vb=
 
 " mappings
 map <silent> <C-n> :NERDTreeToggle<CR>
