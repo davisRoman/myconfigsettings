@@ -33,3 +33,5 @@ if ! grep -q bell-style ~/.bashrc;then
 fi
 
 sudo usermod -a -G dialout $USER
+
+sudo chsh -s /bin/bash
