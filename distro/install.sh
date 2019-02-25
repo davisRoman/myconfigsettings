@@ -21,4 +21,8 @@ if ! [ -f ~/.fzf/install-complete ];then
         ./install --all
         touch install-complete
     popd
+else
+    echo ""
+    echo "*** fzf already installed! ***"
+    echo ""
 fi
