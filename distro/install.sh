@@ -26,3 +26,7 @@ else
     echo "*** fzf already installed! ***"
     echo ""
 fi
+
+if ! grep -q bell-style ~/.bashrc;then
+    echo "bind 'set bell-style none'" >> ~/.bashrc
+fi
