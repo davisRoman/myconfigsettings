@@ -15,7 +15,14 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 vim +PlugInstall +qall
 
 pushd ~/.vim/plugged/command-t/
-   rake make
+    if ! [ -f compile-complete ];then
+        rake make
+        touch compile-complete
+    else
+        echo ""
+        echo "*** command-t already compiled! ***"
+        echo ""
+    fi
 popd
 
 pushd ~/.vim/plugged/YouCompleteMe/
@@ -26,6 +33,15 @@ pushd ~/.vim/plugged/YouCompleteMe/
     # sudo mkswap ~/swapfile
     # sudo swapon ~/swapfile
     # sudo ~/swapon -s
-    [ -f /etc/rpi-issue ] && X=1 #https://nallerooth.com/post/building_ycm_on_raspberry_pi_3/
-    YCM_CORES=$X ./install.py --clang-completer
+    if ! [ -f compile-complete ];then
+        if [ -f /etc/rpi-issue ];then
+            X=1 #https://nallerooth.com/post/building_ycm_on_raspberry_pi_3/
+        fi
+        YCM_CORES=$X ./install.py --clang-completer
+        touch compile-complete
+    else
+        echo ""
+        echo "*** YouCompleteMe already compiled! ***"
+        echo ""
+    fi
 popd
