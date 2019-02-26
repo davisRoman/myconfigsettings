@@ -38,7 +38,7 @@ sudo chsh -s /bin/bash
 
 BLUETOOTH_CONFIG=/etc/bluetooth/main.conf
 if grep -q '#ControllerMode = dual' $BLUETOOTH_CONFIG;then
-    sed -ie '/#ControllerMode/s/^.//'          $BLUETOOTH_CONFIG
-    sed -i  '/ControllerMode /s/=.*$/= bredr/' $BLUETOOTH_CONFIG
+    sudo sed -ie '/#ControllerMode/s/^.//'          $BLUETOOTH_CONFIG
+    sudo sed -i  '/ControllerMode /s/=.*$/= bredr/' $BLUETOOTH_CONFIG
     sudo systemctl restart bluetooth
 fi
