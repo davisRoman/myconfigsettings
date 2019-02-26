@@ -3,5 +3,7 @@ def Settings( **kwargs ):
       'flags': [ '-x', 'c++', '-Wall', '-Wextra', '-Werror',
                  '-lapue',
                  '-I../include',
+                 '-l:libtlpi.a',
+                 '-I../lib',
                ],
     }
