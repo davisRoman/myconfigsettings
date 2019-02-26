@@ -2,7 +2,7 @@
 
 set -e
 
-for package in git minicom xterm tmux tig lsof curl g++ htop silversearcher-ag meld screenkey libbsd-dev youtube-dl figlet tree
+for package in git minicom xterm tmux tig lsof curl g++ htop silversearcher-ag meld screenkey libbsd-dev youtube-dl figlet tree libcap-dev libacl1-dev
 do
     if ! dpkg -l | grep -q $package;then
         echo "$package needs to be installed"
