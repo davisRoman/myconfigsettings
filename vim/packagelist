@@ -3,5 +3,6 @@ ruby-dev
 cmake
 python
 python-dev
+python2.7-dev
 cscope
 exuberant-ctags
