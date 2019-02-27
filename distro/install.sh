@@ -19,6 +19,7 @@ git config --global difftool.prompt false
 git config --global alias.d difftool
 
 if ! [ -f ~/.fzf/install-complete ];then
+    rm -rf ~/.fzf
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     pushd ~/.fzf
         ./install --all
