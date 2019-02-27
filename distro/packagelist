@@ -16,3 +16,4 @@ figlet
 tree
 libcap-dev
 libacl1-dev
+shellcheck
