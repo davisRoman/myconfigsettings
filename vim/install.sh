@@ -4,7 +4,7 @@ set -e
 
 for package in $(cat packagelist)
 do
-   ! dpkg -l | grep -q $package && sudo apt-get -y install $package || echo "$package already installed!"
+   ! dpkg -l | grep -q $package && sudo apt-get -y --allow-unauthenticated install $package || echo "$package already installed!"
 done
 
 ln -sf $PWD/vimrc ~/.vimrc
