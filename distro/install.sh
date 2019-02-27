@@ -46,3 +46,7 @@ if grep -q '#ControllerMode = dual' $BLUETOOTH_CONFIG;then
     sudo sed -i  '/ControllerMode /s/=.*$/= bredr/' $BLUETOOTH_CONFIG
     sudo systemctl restart bluetooth
 fi
+
+echo "*******************************"
+echo "distro configured successfully!"
+echo "*******************************"

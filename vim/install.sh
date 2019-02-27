@@ -45,3 +45,7 @@ pushd ~/.vim/plugged/YouCompleteMe/
         echo ""
     fi
 popd
+
+echo "****************************"
+echo "vim configured successfully!"
+echo "****************************"
