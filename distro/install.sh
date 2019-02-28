@@ -47,6 +47,11 @@ if grep -q '#ControllerMode = dual' $BLUETOOTH_CONFIG;then
     sudo systemctl restart bluetooth
 fi
 
+cat << EOF > ~/.gdbinit
+define hook-next
+  refresh
+end
+EOF
 echo "*******************************"
 echo "distro configured successfully!"
 echo "*******************************"
