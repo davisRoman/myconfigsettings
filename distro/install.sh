@@ -60,6 +60,13 @@ define hook-next
   refresh
 end
 EOF
+
+cat << EOF > ~/.lesskey
+#env
+LESS = -i -R -q
+EOF
+lesskey
+
 echo "*******************************"
 echo "distro configured successfully!"
 echo "*******************************"
