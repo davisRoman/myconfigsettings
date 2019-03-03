@@ -17,6 +17,7 @@ if ! [ -d ~/.oh-my-zsh/ ];then
    sed -i 's/env zsh -l//g' /tmp/install.sh
    sh /tmp/install.sh
    echo "unsetopt BEEP" >> ~/.zshrc
+   echo 'PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"' >> ~/.zshrc
 fi
 
 git config --global core.editor "vim"
