@@ -38,6 +38,7 @@ pushd ~/.vim/plugged/YouCompleteMe/
            #https://nallerooth.com/post/building_ycm_on_raspberry_pi_3/
            YCM_CORES=1 ./install.py --clang-completer
            sudo swapoff -a
+           rm -f ~/swapfile
         else
            ./install.py --clang-completer
         fi
