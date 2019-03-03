@@ -19,3 +19,4 @@ libacl1-dev
 shellcheck
 valgrind
 ltrace
+zsh

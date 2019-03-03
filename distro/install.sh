@@ -12,6 +12,13 @@ do
     fi
 done
 
+if ! [ -d ~/.oh-my-zsh/ ];then
+   curl -o /tmp/install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+   sed -i 's/env zsh -l//g' /tmp/install.sh
+   sh /tmp/install.sh
+   echo "unsetopt BEEP" >> ~/.zshrc
+fi
+
 git config --global core.editor "vim"
 git config --global user.name   "davis roman"
 git config --global diff.tool vimdiff
