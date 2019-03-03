@@ -46,6 +46,8 @@ pushd ~/.vim/plugged/YouCompleteMe/
     fi
 popd
 
+ln -svf $PWD/.ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
+
 echo "****************************"
 echo "vim configured successfully!"
 echo "****************************"
