@@ -20,3 +20,4 @@ shellcheck
 valgrind
 ltrace
 zsh
+guvcview
