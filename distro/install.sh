@@ -67,6 +67,11 @@ LESS = -i -R -q
 EOF
 lesskey
 
+if ! [ -d ~/.oh-my-zsh/custom/themes/powerlevel9k ];then
+   git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/
+   sed -ir "s/(ZSH_THEME *= *\").*/\1powerlevel9k\/powerlevel9k\"/" ~/.zshrc
+fi
+
 echo "*******************************"
 echo "distro configured successfully!"
 echo "*******************************"
