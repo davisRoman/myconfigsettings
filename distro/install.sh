@@ -67,22 +67,22 @@ LESS = -i -R -q
 EOF
 lesskey
 
-if ! [ -d ~/.oh-my-zsh/custom/themes/powerlevel9k ];then
-   git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/
-   sed -ir "s/(ZSH_THEME *= *\").*/\1powerlevel9k\/powerlevel9k\"/" ~/.zshrc
-fi
-
-if ! [ -f ~/.fonts/fontawesome-regular.ttf ];then
-   ! [ -d ~/.fonts ] && mkdir -p ~/.fonts
-   if ! [ -f awesome-terminal-fonts ];then
-      git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~
-   fi
-   cp -vr ~/awesome-terminal-fonts/build/* ~/.fonts
-   rm -rf ~/awesome-terminal-fonts
-   fc-cache
-   fc-list | grep fontawesome-regular.ttf
-   echo "POWERLEVEL9K_MODE='awesome-fontconfig'" >> ~/.zshrc
-fi
+#if ! [ -d ~/.oh-my-zsh/custom/themes/powerlevel9k ];then
+#   git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+#   #sed -ir "s/(ZSH_THEME *= *\").*/\1powerlevel9k\/powerlevel9k\"/" ~/.zshrc
+#fi
+#
+#if ! [ -f ~/.fonts/fontawesome-regular.ttf ];then
+#   ! [ -d ~/.fonts ] && mkdir -p ~/.fonts
+#   if ! [ -d ~/awesome-terminal-fonts ];then
+#      git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~/awesome-terminal-fonts
+#      cp -vr ~/awesome-terminal-fonts/build/* ~/.fonts
+#      #rm -rf ~/awesome-terminal-fonts
+#      fc-cache -fv ~/.fonts
+#      fc-list | grep fontawesome-regular.ttf
+#      echo "POWERLEVEL9K_MODE=\"awesome-fontconfig\"" >> ~/.zshrc
+#   fi
+#fi
 
 echo "*******************************"
 echo "distro configured successfully!"
