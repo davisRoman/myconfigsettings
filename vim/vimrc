@@ -50,3 +50,4 @@ autocmd FileType c,cpp,h TlistOpen
 set foldmethod=indent
 set foldopen=all
 set foldclose=all
+set foldcolumn=6
