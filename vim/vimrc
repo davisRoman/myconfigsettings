@@ -50,7 +50,7 @@ autocmd FileType c,cpp,h TlistOpen
 set foldmethod=indent
 set foldopen=all
 set foldclose=all
-set foldcolumn=6
+"set foldcolumn=6
 
 "Automatic toggling between line number (https://jeffkreeftmeijer.com/vim-number/)
 set number relativenumber
