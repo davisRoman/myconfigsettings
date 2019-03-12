@@ -13,11 +13,11 @@ do
 done
 
 if ! [ -d ~/.oh-my-zsh/ ];then
-   curl -o /tmp/install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-   sed -i 's/env zsh -l//g' /tmp/install.sh
-   sh /tmp/install.sh
-   echo "unsetopt BEEP" >> ~/.zshrc
-   echo 'PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"' >> ~/.zshrc
+    curl -o /tmp/install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    sed -i 's/env zsh -l//g' /tmp/install.sh
+    sh /tmp/install.sh
+    echo "unsetopt BEEP" >> ~/.zshrc
+    echo 'PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"' >> ~/.zshrc
 fi
 
 git config --global core.editor "vim"
@@ -73,15 +73,15 @@ if ! [ -d ~/.oh-my-zsh/custom/themes/powerlevel9k ];then
 fi
 
 if ! [ -f ~/.fonts/fontawesome-regular.ttf ];then
-   ! [ -d ~/.fonts ] && mkdir -p ~/.fonts
-   if ! [ -d ~/awesome-terminal-fonts ];then
-      git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~/awesome-terminal-fonts
-      cp -vr ~/awesome-terminal-fonts/build/* ~/.fonts
-      rm -rf ~/awesome-terminal-fonts
-      fc-cache -fv ~/.fonts
-      fc-list | grep fontawesome-regular.ttf
-      #TODO set POWERLEVEL9K_MODE='awesome-fontconfig' underneath ZSH_THEME
-   fi
+    ! [ -d ~/.fonts ] && mkdir -p ~/.fonts
+    if ! [ -d ~/awesome-terminal-fonts ];then
+       git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~/awesome-terminal-fonts
+       cp -vr ~/awesome-terminal-fonts/build/* ~/.fonts
+       rm -rf ~/awesome-terminal-fonts
+       fc-cache -fv ~/.fonts
+       fc-list | grep fontawesome-regular.ttf
+       #TODO set POWERLEVEL9K_MODE='awesome-fontconfig' underneath ZSH_THEME
+    fi
 fi
 
 echo "*******************************"
