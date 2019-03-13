@@ -26,6 +26,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'gregsexton/gitv'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'kshenoy/vim-signature'
 call plug#end()
 
 " basic stuff
