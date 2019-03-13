@@ -25,6 +25,7 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'terryma/vim-multiple-cursors'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'gregsexton/gitv'
+Plug 'yuttie/comfortable-motion.vim'
 call plug#end()
 
 " basic stuff
