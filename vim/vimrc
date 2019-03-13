@@ -33,7 +33,7 @@ set shiftwidth=4
 set hlsearch
 set incsearch
 set noeb vb t_vb=
-" autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree
 
 " mappings
 map <silent> <C-n> :NERDTreeToggle<CR>
