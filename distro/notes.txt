@@ -1,0 +1,2 @@
+to remove annoying terminal beeps use:
+    Settings -> Sound Effects -> disable Alert Volume
