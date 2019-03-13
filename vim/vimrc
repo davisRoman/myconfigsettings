@@ -22,6 +22,7 @@ Plug 'craigemery/vim-autotag'
 Plug 'vim-scripts/taglist.vim'
 Plug 'takac/vim-hardtime'
 Plug 'airblade/vim-gitgutter'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 " basic stuff
