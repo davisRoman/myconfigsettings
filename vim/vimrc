@@ -23,6 +23,7 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'takac/vim-hardtime'
 Plug 'airblade/vim-gitgutter'
 "Plug 'terryma/vim-multiple-cursors'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'gregsexton/gitv'
 call plug#end()
 
