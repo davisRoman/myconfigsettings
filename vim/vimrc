@@ -21,6 +21,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'craigemery/vim-autotag'
 Plug 'vim-scripts/taglist.vim'
 Plug 'takac/vim-hardtime'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " basic stuff
@@ -64,3 +65,5 @@ augroup END
 let g:hardtime_default_on = 0
 let g:hardtime_timeout = 2000
 let g:hardtime_showmsg = 1
+
+set updatetime=100
