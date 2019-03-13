@@ -84,6 +84,10 @@ if ! [ -f ~/.fonts/fontawesome-regular.ttf ];then
     fi
 fi
 
+#change /bin/sh from dash to bash
+echo "dash dash/sh boolean false" | sudo debconf-set-selections
+sudo DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
+
 echo "*******************************"
 echo "distro configured successfully!"
 echo "*******************************"
