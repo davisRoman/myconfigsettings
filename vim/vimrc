@@ -20,6 +20,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'craigemery/vim-autotag'
 Plug 'vim-scripts/taglist.vim'
+Plug 'takac/vim-hardtime'
 call plug#end()
 
 " basic stuff
@@ -59,3 +60,7 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+let g:hardtime_default_on = 0
+let g:hardtime_timeout = 2000
+let g:hardtime_showmsg = 1
