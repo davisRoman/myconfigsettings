@@ -27,6 +27,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'gregsexton/gitv'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'kshenoy/vim-signature'
+Plug 'terryma/vim-smooth-scroll'
 call plug#end()
 
 " basic stuff
