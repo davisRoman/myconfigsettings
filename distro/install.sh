@@ -75,12 +75,12 @@ fi
 if ! [ -f ~/.fonts/fontawesome-regular.ttf ];then
     ! [ -d ~/.fonts ] && mkdir -p ~/.fonts
     if ! [ -d ~/awesome-terminal-fonts ];then
-       git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~/awesome-terminal-fonts
-       cp -vr ~/awesome-terminal-fonts/build/* ~/.fonts
-       rm -rf ~/awesome-terminal-fonts
-       fc-cache -fv ~/.fonts
-       fc-list | grep fontawesome-regular.ttf
-       #TODO set POWERLEVEL9K_MODE='awesome-fontconfig' underneath ZSH_THEME
+        git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~/awesome-terminal-fonts
+        cp -vr ~/awesome-terminal-fonts/build/* ~/.fonts
+        rm -rf ~/awesome-terminal-fonts
+        fc-cache -fv ~/.fonts
+        fc-list | grep fontawesome-regular.ttf
+        #TODO set POWERLEVEL9K_MODE='awesome-fontconfig' underneath ZSH_THEME
     fi
 fi
 
