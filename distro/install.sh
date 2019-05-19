@@ -98,6 +98,11 @@ if ! dpkg -s bat;then
     echo "bat has been installed and an alias to cat has been created"
 fi
 
+if ! dpkg -s diskus;then
+    wget "https://github.com/sharkdp/diskus/releases/download/v0.5.0/diskus_0.5.0_amd64.deb"
+    sudo dpkg -i diskus_0.5.0_amd64.deb
+fi
+
 echo "*******************************"
 echo "distro configured successfully!"
 echo "*******************************"
