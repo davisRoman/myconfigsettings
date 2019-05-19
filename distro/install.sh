@@ -99,8 +99,12 @@ if ! dpkg -s bat;then
 fi
 
 if ! dpkg -s diskus;then
-    wget "https://github.com/sharkdp/diskus/releases/download/v0.5.0/diskus_0.5.0_amd64.deb"
-    sudo dpkg -i diskus_0.5.0_amd64.deb
+    version=0.5.0
+    package=diskus_${version}_amd64.deb
+    wget "https://github.com/sharkdp/diskus/releases/download/v0.5.0/$package" -P /tmp
+    sudo apt-get install /tmp/$package
+    rm -vf /tmp/$package
+
 fi
 
 if ! grep xterm-256color ~/.zshrc;then
