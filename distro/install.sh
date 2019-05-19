@@ -96,7 +96,7 @@ if ! dpkg -s bat;then
     wget https://github.com/sharkdp/bat/releases/download/v0.11.0/$package -P /tmp
     sudo apt-get install /tmp/$package
     rm -v /tmp/$package
-    echo "alias bat='cat'" >> ~/.zshrc
+    echo "alias cat='bat'" >> ~/.zshrc
     echo "bat has been installed and an alias to cat has been created"
 fi
 
