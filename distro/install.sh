@@ -89,12 +89,13 @@ echo "dash dash/sh boolean false" | sudo debconf-set-selections
 sudo DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
 if ! dpkg -s bat;then
-   version=0.11.0
-   package=bat_${version}_amd64.deb
-   wget https://github.com/sharkdp/bat/releases/download/v0.11.0/$package -P /tmp
-   sudo apt-get install /tmp/$package
-   echo "alias bat='cat'" >> ~/.zshrc
-   echo "bat has been installed and an alias to cat has been created"
+    version=0.11.0
+    package=bat_${version}_amd64.deb
+    wget https://github.com/sharkdp/bat/releases/download/v0.11.0/$package -P /tmp
+    sudo apt-get install /tmp/$package
+    rm -v /tmp/$package
+    echo "alias bat='cat'" >> ~/.zshrc
+    echo "bat has been installed and an alias to cat has been created"
 fi
 
 echo "*******************************"
