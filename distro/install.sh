@@ -2,6 +2,8 @@
 
 set -e
 
+sudo apt-get update
+
 for package in $(cat packagelist)
 do
     if dpkg -s $package;then
