@@ -103,6 +103,10 @@ if ! dpkg -s diskus;then
     sudo dpkg -i diskus_0.5.0_amd64.deb
 fi
 
+if ! grep xterm-256color ~/.zshrc;then
+sed -i '1s/^/export TERM=\"xterm-256color\"\n/' ~/.zshrc
+fi
+
 echo "*******************************"
 echo "distro configured successfully!"
 echo "*******************************"
