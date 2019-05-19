@@ -4,11 +4,11 @@ set -e
 
 for package in $(cat packagelist)
 do
-    if ! dpkg -l | grep -q $package;then
+    if dpkg -s $package;then
+        echo "$package already installed!"
+    else
         echo "$package needs to be installed"
         sudo apt-get -y install $package
-    else
-        echo "$package already installed!"
     fi
 done
 
