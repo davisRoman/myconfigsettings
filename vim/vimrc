@@ -78,3 +78,5 @@ augroup git
     au!
     autocmd FileType git :setlocal foldlevel=99
 augroup END
+
+set mouse-=a
