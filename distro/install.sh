@@ -113,6 +113,9 @@ if ! grep xterm-256color ~/.zshrc;then
 sed -i '1s/^/export TERM=\"xterm-256color\"\n/' ~/.zshrc
 fi
 
+#deals with issue where the right click on the touchpad for dell xps 15 doesn't work
+gsettings set org.gnome.desktop.peripherals.touchpad click-method areas
+
 echo "*******************************"
 echo "distro configured successfully!"
 echo "*******************************"
