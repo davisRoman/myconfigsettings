@@ -31,3 +31,7 @@ gparted
 percol
 tudu
 ranger
+atop
+sysstat
+python3-distutils
+python3-pip
