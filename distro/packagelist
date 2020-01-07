@@ -24,6 +24,7 @@ guvcview
 vlc
 fonts-powerline
 net-tools
+exfat-utils
 vim
 ifstat
 hardinfo
