@@ -79,3 +79,5 @@ augroup git
 augroup END
 
 set mouse-=a
+
+let g:LustyJugglerSuppressRubyWarning = 1
