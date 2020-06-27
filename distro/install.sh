@@ -16,7 +16,7 @@ done
 
 if ! [ -d ~/.oh-my-zsh/ ];then
     curl -o /tmp/install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-    sed -i 's/env zsh -l//g' /tmp/install.sh
+    sed -i 's/exec zsh -l//g' /tmp/install.sh
     sh /tmp/install.sh
     echo "unsetopt BEEP" >> ~/.zshrc
     echo 'PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"' >> ~/.zshrc
