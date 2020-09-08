@@ -14,6 +14,7 @@ Plug 'sjbach/lusty'
 Plug 'vim-scripts/cscope.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -39,7 +40,8 @@ set shiftwidth=4
 set hlsearch
 set incsearch
 set noeb vb t_vb=
-autocmd VimEnter * NERDTree
+let g:gitgutter_highlight_lines = 1
+" autocmd VimEnter * NERDTree
 
 " mappings
 map <silent> <C-n> :NERDTreeToggle<CR>
