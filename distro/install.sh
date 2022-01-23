@@ -16,7 +16,7 @@ done
 
 if ! [ -d ~/.oh-my-zsh/ ];then
     curl -o /tmp/install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-    sed -i 's/exec zsh -l//g' /tmp/install.sh
+    sed -i 's/env zsh -l//g' /tmp/install.sh
     sh /tmp/install.sh
     echo "unsetopt BEEP" >> ~/.zshrc
     echo 'PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"' >> ~/.zshrc
@@ -115,6 +115,8 @@ fi
 
 #deals with issue where the right click on the touchpad for dell xps 15 doesn't work
 gsettings set org.gnome.desktop.peripherals.touchpad click-method areas
+
+gsettings set org.gnome.shell.app-switcher current-workspace-only true
 
 echo "*******************************"
 echo "distro configured successfully!"
